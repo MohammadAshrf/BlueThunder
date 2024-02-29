@@ -1,4 +1,4 @@
-package com.example.ecommercetraining
+package com.training.ecommerce
 
 import android.animation.ObjectAnimator
 import android.os.Build
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.animation.AnticipateInterpolator
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.training.ecommerce.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
+    
     private fun initSplashScreen() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             installSplashScreen()
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                     splashScreenView, View.TRANSLATION_Y, 0f, -splashScreenView.height.toFloat()
                 )
                 slideUp.interpolator = AnticipateInterpolator()
-                slideUp.duration = 1000L
+                slideUp.duration = 10000L
 
                 // Call SplashScreenView.remove at the end of your custom animation.
                 slideUp.doOnEnd { splashScreenView.remove() }

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ecommercetraining"
+    namespace = "com.training.ecommerce"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ecommercetraining"
+        applicationId = "com.training.ecommerce"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
